@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Opdracht Cijfers";
+}
+
+<h1>Opdracht: Amerikaanse cijfersysteem</h1>
+
+<form method="post">
+    <label>Voer je score in (%):</label>
+    <input type="number" name="score" min="0" max="100" required />
+    <button type="submit">Bereken</button>
+</form>
+
+@if (ViewBag.Grade != null)
+{
+    <h2>Resultaat</h2>
+    <p>Score: @ViewBag.Score %</p>
+    <p>Letter: <strong>@ViewBag.Grade</strong></p>
+    <p>@ViewBag.Behaald</p>
+}

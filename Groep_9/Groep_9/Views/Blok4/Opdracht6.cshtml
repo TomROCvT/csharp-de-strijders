@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Opdracht Draaibank";
+}
+
+<h1>Opdracht: Metaaldraaibank vervanging</h1>
+
+<form method="post">
+    <label>Aantal werkuren:</label>
+    <input type="number" name="werkuren" required />
+    <br />
+
+    <label>Leeftijd (in jaren):</label>
+    <input type="number" name="leeftijd" required />
+    <br />
+
+    <label>Aantal storingen per jaar:</label>
+    <input type="number" name="storingen" required />
+    <br />
+
+    <button type="submit">Controleer</button>
+</form>
+
+@if (ViewBag.Vervangen != null)
+{
+    <h2>Resultaat</h2>
+    <p>Werkuren: @ViewBag.Werkuren</p>
+    <p>Leeftijd: @ViewBag.Leeftijd jaar</p>
+    <p>Storingen: @ViewBag.Storingen</p>
+    <p><strong>@ViewBag.Vervangen</strong></p>
+}

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Opdracht Maanden";
+}
+
+<h1>Opdracht: Maand in verschillende talen</h1>
+
+<form method="post">
+    <label>Kies een taal:</label><br />
+    <input type="radio" name="keuze" value="1" required /> Nederlands<br />
+    <input type="radio" name="keuze" value="2" /> Duits<br />
+    <input type="radio" name="keuze" value="3" /> Engels<br />
+    <input type="radio" name="keuze" value="4" /> Frans<br />
+    <input type="radio" name="keuze" value="5" /> Spaans<br />
+    <input type="radio" name="keuze" value="6" /> Turks<br />
+    <br />
+    <button type="submit">Toon maand</button>
+</form>
+
+@if (ViewBag.Resultaat != null)
+{
+    <h2>Resultaat</h2>
+    <p>@ViewBag.Resultaat</p>
+}
