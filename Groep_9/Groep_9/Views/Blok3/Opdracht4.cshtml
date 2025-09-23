@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Opdracht Valuta Omrekening";
+}
+
+<h1>Opdracht: Euro omrekenen naar vijf valuta’s</h1>
+
+<form method="post">
+    <div>
+        <label>Bedrag in euro’s (€):</label>
+        <input type="number" name="euroBedrag" step="0.01" required />
+    </div>
+    <button type="submit">Omrekenen</button>
+</form>
+
+@if (ViewBag.Resultaten != null)
+{
+    <h2>Omrekening van €@ViewBag.EuroBedrag</h2>
+    <ul>
+        <li>USD: @ViewBag.Resultaten["USD"]</li>
+        <li>GBP: @ViewBag.Resultaten["GBP"]</li>
+        <li>JPY: @ViewBag.Resultaten["JPY"]</li>
+        <li>CHF: @ViewBag.Resultaten["CHF"]</li>
+        <li>AUD: @ViewBag.Resultaten["AUD"]</li>
+    </ul>
+}

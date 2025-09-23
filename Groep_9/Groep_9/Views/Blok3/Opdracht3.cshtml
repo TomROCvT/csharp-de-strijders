@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Opdracht 3 - Kubus inhoud";
+}
+
+<h1>Opdracht 3: Bereken de inhoud van een kubus</h1>
+
+<form method="post">
+    <div>
+        <label>Hoogte:</label>
+        <input type="number" name="hoogte" step="0.01" required /> cm
+    </div>
+    <div>
+        <label>Lengte:</label>
+        <input type="number" name="lengte" step="0.01" required /> cm
+    </div>
+    <div>
+        <label>Breedte:</label>
+        <input type="number" name="breedte" step="0.01" required /> cm
+    </div>
+    <button type="submit">Bereken</button>
+</form>
+
+@if (ViewBag.Inhoud != null)
+{
+    <h2>Inhoud = @ViewBag.Inhoud cm³</h2>
+}
