@@ -1,18 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
+using Groep_9.Models;
 
 namespace Groep_9.Controllers
 {
     public class Blok3Controller : Controller
     {
-        public IActionResult Opdracht1()
+        public IActionResult Opdracht1(Persoon persoon)
         {
+            string TotaleNaam = persoon.Voornaam + persoon.Tussenvoegsel + persoon.Achternaam;
 
-            string test = "Hoi";
-            return View("Opdracht1", test);
+            int LengteNaam = TotaleNaam.Length;
 
-            //code van opdracht 1 hier
+            ViewBag.LengteNaam = LengteNaam;
+
+            return View();
 
         }
 
