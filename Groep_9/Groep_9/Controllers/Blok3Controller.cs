@@ -19,11 +19,14 @@ namespace Groep_9.Controllers
 
         }
 
-        public IActionResult Opdracht2()
+        public IActionResult Opdracht2(DateTime GeboortedatumEen, DateTime GeboortedatumTwee)
         {
+            TimeSpan Verschil = GeboortedatumEen - GeboortedatumTwee;
+
+            ViewBag.Verschil = Math.Abs(Verschil.Days);
+
             return View();
 
-            //code van opdracht 2 hier
         }
 
         public IActionResult Opdracht3(double hoogte, double lengte, double breedte)

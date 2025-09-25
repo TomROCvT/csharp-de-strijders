@@ -1,5 +1,12 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<form method="post">
+<label>Geboortedatum vrouw</label>
+<input type="date" name="GeboortedatumEen"></input>
+<label>Geboortedatum man</label>
+<input type="date" name="GeboortedatumTwee"></input>
+<input type="submit"/>
+</form>
+
+@if (ViewBag.Verschil != null)
+{
+    <p>Verschil in dagen: @ViewBag.Verschil</p>
 }
