@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Opdracht Dobbelstenen";
+}
+
+<h1>Dobbelstenen gooien</h1>
+
+<form method="post">
+    <button type="submit">Gooi 5 dobbelstenen</button>
+</form>
+
+@if (ViewBag.Worpen != null)
+{
+    <h2>Resultaat</h2>
+    <p>Worpen: @string.Join(", ", (int[])ViewBag.Worpen)</p>
+    <p>Totaal: @ViewBag.Totaal</p>
+    <p>Gemiddelde: @ViewBag.Gemiddelde</p>
+}
