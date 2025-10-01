@@ -1,0 +1,12 @@
+﻿<form method="post" asp-action="Opdracht4">
+    <label>Getal 1</label>
+    <input type="number" name="Getal1"/>
+    <label>Getal 2</label>
+    <input type="number" name="Getal2" />
+    <input type="submit" />
+</form>
+
+@if (ViewBag.Antwoord != null)
+{
+    @ViewBag.Antwoord;
+}

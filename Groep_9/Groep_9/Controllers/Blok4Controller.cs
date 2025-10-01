@@ -6,14 +6,107 @@ namespace Groep_9.Controllers
 {
     public class Blok4Controller : Controller
     {
+        [HttpGet]
         public IActionResult Opdracht1()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Opdracht1(int NummerEen, int NummerTwee)
+        {
+            string Antwoord;
 
-            string test = "Hoi";
-            return View("Opdracht1", test);
+            if (NummerEen > NummerTwee)
+            {
+                Antwoord = "Nummer een wint"; 
+            } else if (NummerTwee > NummerEen)
+            {
+                Antwoord = "Nummer Twee wint";
+            } else
+            {
+                Antwoord = "Beide getallen zijn gelijk";
+            }
+            ViewBag.Antwoord = Antwoord;
+            return View();
 
-            //code van opdracht 1 hier
+        }
+        [HttpGet]
+        public IActionResult Opdracht2()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Opdracht2(int GetalEen, int GetalTwee, int GetalDrie)
+        {
+            string Antwoord;
 
+            if (GetalEen > GetalDrie && GetalTwee > GetalDrie)
+            {
+                Antwoord = "Het derde getal is de kleinste van de drie";
+            } else
+            {
+                Antwoord = "Het derde getal is niet de kleinste van de drie";
+            }
+            ViewBag.Antwoord = Antwoord;
+            return View();
+
+        }
+
+        [HttpGet]
+        public IActionResult Opdracht3()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Opdracht3(int Getal)
+        {
+            string Antwoord;
+
+            switch(Getal)
+            {
+                case 1:
+                    Antwoord = "Klaveren";
+                    break;
+
+                case 2:
+                    Antwoord = "Ruiten";
+                    break;
+
+                case 3:
+                    Antwoord = "Harten";
+                    break;
+
+                case 4:
+                    Antwoord = "Schoppen";
+                    break;
+
+                default:
+                    Antwoord = "Alleen 1, 2, 3 of 4 is toegestaan";
+                    break;
+            }
+            ViewBag.Antwoord = Antwoord;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Opdracht4()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Opdracht4(int Getal1, int Getal2)
+        {
+            string Antwoord;
+
+            if (Getal1 % Getal2 == 0)
+            {
+                Antwoord = $"{Getal1} is deelbaar door {Getal2}";
+            } else
+            {
+                Antwoord = $"{Getal1} is niet deelbaar door {Getal2}";
+            }
+            ViewBag.Antwoord = Antwoord;
+            return View();
         }
 
         public IActionResult Opdracht5(int score)
