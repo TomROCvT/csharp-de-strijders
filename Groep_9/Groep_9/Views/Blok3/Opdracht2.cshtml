@@ -1,3 +1,12 @@
-﻿<form>
-
+<form method="post">
+<label>Geboortedatum vrouw</label>
+<input type="date" name="GeboortedatumEen"></input>
+<label>Geboortedatum man</label>
+<input type="date" name="GeboortedatumTwee"></input>
+<input type="submit"/>
 </form>
+
+@if (ViewBag.Verschil != null)
+{
+    <p>Verschil in dagen: @ViewBag.Verschil</p>
+}
